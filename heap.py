@@ -33,18 +33,19 @@ def swap(a, b, arr):
 
 
 # inp = [50, 30, 20, 15, 10, 8, 16] (heapified)
-inp = [15, 50, 8, 30, 10, 20, 16]
 
 
-def get_heap():
+def get_heap(inp):
     # processing all parent nodes -> n // 2 -1
     limit = int((len(inp) // 2) - 1)
     for i in range(limit, -1, -1):      # 2 to 0 index. all the way to root (step -1)
         heapify(inp, i)
+    return inp
 
 
-get_heap()
-print(inp)
+# inp = [15, 50, 8, 30, 10, 20, 16]
+# res = get_heap(inp)
+# print("get: ", res)
 
 # [50,30,20,15,10,8,16]
 #  0  1  2  3  4  5  6
