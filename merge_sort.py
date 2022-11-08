@@ -1,4 +1,5 @@
-a = [9, 2, 5, 6, 10, 65, 4, 21]
+# a = [9, 2, 5, 6, 10, 65, 4, 21]
+from utils import read_arr
 
 
 def mergeSort(arr, l, r):
@@ -34,7 +35,10 @@ def merge(arr, l, mid, r):
             arr[k] = R[j]
             j += 1
         k += 1
-
+    # print("K: ", k)
+    # print("L: ", i, L)
+    # print("R: ", j, R)
+    # print(arr)
     while i < n1:
         arr[k] = L[i]
         i += 1
@@ -43,7 +47,9 @@ def merge(arr, l, mid, r):
         arr[k] = R[j]
         j += 1
         k += 1
+    # print(arr)
 
 
-mergeSort(a, 0, 7)
+a = read_arr()
+mergeSort(a, 0, len(a)-1)
 print(a)
