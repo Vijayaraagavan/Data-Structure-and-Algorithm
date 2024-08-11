@@ -10,7 +10,10 @@ public class Dijkstra {
     }
 
     void djikstra() {
-        int graph[][] = new int[][] { { 0, 2, 4 }, { 0, 0, 0 }, { 0, -3, 0 } };
+        int graph[][] = new int[][] { {0, 0, 3, 3},
+            {0, 0, 0, 0},
+            {0, 0, 0, 0},
+            {0, 0, 0, 0} };
 
         // track nodes that are added to shortest path tree (spt)
         boolean[] sptset = new boolean[graph.length];
@@ -65,6 +68,7 @@ public class Dijkstra {
         }
         // sptset[min[1]] = true;
         System.out.println(Arrays.toString(spt));
+        System.out.println(Arrays.toString(sptset));
         // this is the base case for recursion. loop until sptset array is filled with
         // true
         if (!isSptComplete(spt, sptset)) {
@@ -76,7 +80,7 @@ public class Dijkstra {
         for (int i = 0; i < spt.length; i++) {
             // I don't know if we should check for cost as maximum value. spt is formed if
             // sptset is full
-            if (i == Integer.MAX_VALUE || !sptset[i])
+            if (!sptset[i])
                 return false;
         }
         return true;
@@ -86,7 +90,7 @@ public class Dijkstra {
         int result = 0;
         int minValue = Integer.MAX_VALUE;
         for (int i = 0; i < spt.length; i++) {
-            if (spt[i] < minValue && !sptset[i]) {
+            if (spt[i] <= minValue && !sptset[i]) {
                 minValue = spt[i];
                 result = i;
             }
