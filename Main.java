@@ -1,10 +1,13 @@
 import graph.BellmanFord;
+import graph.BinarySpt;
 import graph.Dag;
 import graph.Dial;
 import graph.Dijkstra;
 import graph.Floyd;
 import graph.Johnson;
+import graph.KarpMean;
 import graph.Multistage;
+import graph.ShortestUnweighted;
 
 public class Main {
     public static void main(String[] args) {
@@ -19,6 +22,9 @@ public class Main {
         // Johnson.start();
         // Dag.start();
         // Dial.start();
-        Multistage.start();
+        // Multistage.start();
+        // ShortestUnweighted.start();
+        // KarpMean.start();
+        BinarySpt.start();
     }
 }
