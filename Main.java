@@ -8,6 +8,7 @@ import graph.Johnson;
 import graph.KarpMean;
 import graph.Multistage;
 import graph.ShortestUnweighted;
+import set.DisjointSet;
 
 public class Main {
     public static void main(String[] args) {
@@ -25,6 +26,7 @@ public class Main {
         // Multistage.start();
         // ShortestUnweighted.start();
         // KarpMean.start();
-        BinarySpt.start();
+        // BinarySpt.start();
+        DisjointSet.start();
     }
 }
